@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Outlet, useParams, Link } from 'react-router-dom';
 import { API_KEY } from '../components/API';
 
 export const MovieDetails = () => {
@@ -16,11 +16,10 @@ export const MovieDetails = () => {
     };
 
     fetchMovieDetails();
-  }, []);
+  }, [id]);
 
   return (
     <>
-      <h1>Movie: {id}</h1>
       <div>
         {movie && (
           <div>
@@ -38,8 +37,19 @@ export const MovieDetails = () => {
         )}
         <div>
           <p>Additional information</p>
+          {movie && (
+            <ul>
+              <li key={movie.id}>
+                <Link to={`reviews`}>reviews</Link>
+              </li>
+              <li key={movie.id}>
+                <Link to={`cast`}>cast</Link>
+              </li>
+            </ul>
+          )}
         </div>
       </div>
+      <Outlet />
     </>
   );
 };
