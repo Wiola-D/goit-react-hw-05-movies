@@ -1,16 +1,22 @@
-export const App = () => {
+import { Route, Routes } from 'react-router-dom';
+import { Home } from '../pages/Home';
+import { MovieDetails } from '../pages/MovieDetails';
+import { SearchMovies } from '../pages/SearchMovies';
+import { SharedLayout } from './SharedLayout';
+
+const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
-      goit-react-hw-05-movies
+    <div>
+      <Routes>
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<Home />} />
+          <Route path="movies" element={<SearchMovies />}>
+            <Route path="movies/:id" element={<MovieDetails />} />
+          </Route>
+        </Route>
+      </Routes>
     </div>
   );
 };
+
+export default App;
