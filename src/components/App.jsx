@@ -5,6 +5,7 @@ import { SearchMovies } from '../pages/SearchMovies';
 import { SharedLayout } from './SharedLayout';
 import { Reviews } from './Reviews';
 import { Cast } from './Cast';
+import { NotFound } from '../pages/NotFound';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
             <Route path="reviews" element={<Reviews />} />
           </Route>
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );

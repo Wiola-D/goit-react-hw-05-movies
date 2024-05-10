@@ -26,7 +26,7 @@ export const Cast = () => {
               <tr key={cast.id}>
                 <td>{index + 1}</td>
                 <td>
-                  <img src={cast.profile_path} />
+                  <img src={cast.profile_path} alt="{cast.name}" />
                 </td>
                 <th>Name:</th>
                 <td>{cast.name}</td>
