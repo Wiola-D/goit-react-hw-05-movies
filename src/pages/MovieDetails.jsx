@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Outlet, useParams, Link } from 'react-router-dom';
-import { API_KEY } from '../components/API';
+import { getMovieDetails } from '../components/API';
 
 export const MovieDetails = () => {
   const { id } = useParams();
@@ -8,10 +8,7 @@ export const MovieDetails = () => {
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
-      const response = await fetch(
-        `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`
-      );
-      const fetchedMovie = await response.json();
+      const fetchedMovie = await getMovieDetails(id);
       setMovie(fetchedMovie);
     };
 
@@ -39,10 +36,10 @@ export const MovieDetails = () => {
           <p>Additional information</p>
           {movie && (
             <ul>
-              <li key={movie.id}>
+              <li key="reviews">
                 <Link to={`reviews`}>reviews</Link>
               </li>
-              <li key={movie.id}>
+              <li key="cast">
                 <Link to={`cast`}>cast</Link>
               </li>
             </ul>

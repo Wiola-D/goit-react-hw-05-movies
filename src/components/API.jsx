@@ -22,7 +22,7 @@ export const getMovieDetails = async id => {
   );
   const data = await response.json();
   console.log(data);
-  return data.results;
+  return data;
 };
 
 export const getMovieCredits = async movieId => {
