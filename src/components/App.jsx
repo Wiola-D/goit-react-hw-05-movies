@@ -14,8 +14,8 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="movies" element={<SearchMovies />} />
           <Route path="movies/:id" element={<MovieDetails />}>
-            <Route path="reviews" element={<Reviews />} />
             <Route path="cast" element={<Cast />} />
+            <Route path="reviews" element={<Reviews />} />
           </Route>
         </Route>
       </Routes>

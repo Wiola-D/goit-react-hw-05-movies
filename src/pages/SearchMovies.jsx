@@ -15,11 +15,6 @@ export const SearchMovies = () => {
   const onSubmit = async e => {
     e.preventDefault();
 
-    if (searchInput === '') {
-      setMovies([]);
-      return;
-    }
-
     const results = await searchMovies(searchInput);
 
     if (results.length === 0) {

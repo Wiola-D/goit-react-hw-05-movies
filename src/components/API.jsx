@@ -16,9 +16,9 @@ export const searchMovies = async query => {
   return data.results;
 };
 
-export const getMovieDetails = async id => {
+export const getMovieDetails = async movieId => {
   const response = await fetch(
-    `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`
+    `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}`
   );
   const data = await response.json();
   return data;
@@ -29,12 +29,12 @@ export const getMovieCredits = async movieId => {
     `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${API_KEY}`
   );
   const data = await response.json();
-  return data;
+  return data.cast;
 };
 
-export const getMovieReviews = async id => {
+export const getMovieReviews = async movieId => {
   const response = await fetch(
-    `https://api.themoviedb.org/3/movie/${id}/reviews?api_key=${API_KEY}`
+    `https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=${API_KEY}`
   );
 
   const data = await response.json();
