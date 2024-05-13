@@ -11,7 +11,9 @@ const SharedLayout = () => {
           <img src={movieIcon} alt="Movie Icon" />
         </Logo>
         <nav>
-          <Link to="/">Home</Link>
+          <Link to="/" end>
+            Home
+          </Link>
           <Link to="movies">Movies</Link>
         </nav>
       </Header>
