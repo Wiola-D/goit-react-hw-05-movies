@@ -1,4 +1,5 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 import { Home } from '../pages/Home';
 import { MovieDetails } from '../pages/MovieDetails';
 import { SearchMovies } from '../pages/SearchMovies';
@@ -8,6 +9,12 @@ import { Cast } from './Cast';
 import { NotFound } from '../pages/NotFound';
 
 const App = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate('/'); // Przekierowanie na stronę główną
+  }, [navigate]);
+
   return (
     <div>
       <Routes>
