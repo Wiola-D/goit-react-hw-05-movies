@@ -1,3 +1,4 @@
+import { NotFound } from 'pages/NotFound';
 import { lazy } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
@@ -20,7 +21,7 @@ const App = () => {
             <Route path="reviews" element={<Reviews />} />
           </Route>
         </Route>
-        <Route path="*" element={<Navigate to="/" />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
