@@ -23,7 +23,6 @@ const MovieDetails = () => {
   useEffect(() => {
     const fetchMovieDetails = async () => {
       const fetchedMovie = await getMovieDetails(id);
-      console.log(location.state);
       setMovie(fetchedMovie);
     };
 
