@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { getTrendingMovies } from '../components/API';
+import { getTrendingMovies } from '../../components/API';
+import { Container, Title } from 'pages/Home/Home.styled';
 
-export const Home = () => {
+const Home = () => {
   const [trendingMovies, setTrendingMovies] = useState([]); // stan z listą filmów popularnych
 
   useEffect(() => {
@@ -15,8 +16,8 @@ export const Home = () => {
   }, []); // pusta tablica oznacza, że useEffect wywoła się tylko raz po załadowaniu komponentu
 
   return (
-    <>
-      <h1>Trending today</h1>
+    <Container>
+      <Title>Trending today</Title>
       <ul>
         {trendingMovies.map(movie => (
           <li key={movie.id}>
@@ -24,6 +25,7 @@ export const Home = () => {
           </li>
         ))}
       </ul>
-    </>
+    </Container>
   );
 };
+export default Home;
