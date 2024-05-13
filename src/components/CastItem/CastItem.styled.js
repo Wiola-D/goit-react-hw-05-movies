@@ -19,6 +19,7 @@ export const Description = styled.div`
 
 display: flex;
 flex-direction: column;
+flex-wrap: wrap;
 padding-left: 5px;
 
   }

@@ -18,7 +18,6 @@ const SearchBox = () => {
   const handleSubmit = e => {
     e.preventDefault();
     if (searchQuery.trim() === '') {
-      console.log(searchQuery);
       alert('Please enter a search phrase!');
     } else {
       setSearchParams({ query: searchQuery });

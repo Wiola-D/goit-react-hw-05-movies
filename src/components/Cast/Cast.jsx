@@ -11,7 +11,6 @@ const Cast = () => {
   useEffect(() => {
     const fetchMovieCast = async () => {
       const fetchedMovie = await getMovieCredits(id);
-      console.log(fetchedMovie);
       setCast(fetchedMovie);
     };
 

@@ -13,7 +13,6 @@ export const MoviesList = () => {
   useEffect(() => {
     if (query) {
       fetchMovies(query);
-      console.log(query);
     } else {
       setMovies([]);
     }
