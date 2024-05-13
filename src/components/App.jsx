@@ -1,19 +1,13 @@
-import { Route, Routes, useNavigate, Navigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import { Route, Routes, , Navigate } from 'react-router-dom';
+
 import { Home } from '../pages/Home';
 import { MovieDetails } from '../pages/MovieDetails';
 import { SearchMovies } from '../pages/SearchMovies';
 import { SharedLayout } from './SharedLayout';
 import { Reviews } from './Reviews';
 import { Cast } from './Cast';
-import { NotFound } from '../pages/NotFound';
 
 const App = () => {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    navigate('/'); // Przekierowanie na stronę główną
-  }, []);
 
   return (
     <div>
