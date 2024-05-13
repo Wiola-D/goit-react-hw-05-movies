@@ -1,4 +1,4 @@
-import { Route, Routes, , Navigate } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 
 import { Home } from '../pages/Home';
 import { MovieDetails } from '../pages/MovieDetails';
@@ -8,7 +8,6 @@ import { Reviews } from './Reviews';
 import { Cast } from './Cast';
 
 const App = () => {
-
   return (
     <div>
       <Routes>
