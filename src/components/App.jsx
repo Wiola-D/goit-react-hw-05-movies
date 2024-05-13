@@ -1,4 +1,4 @@
-import { Route, Routes, useNavigate } from 'react-router-dom';
+import { Route, Routes, useNavigate, Navigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { Home } from '../pages/Home';
 import { MovieDetails } from '../pages/MovieDetails';
@@ -13,7 +13,7 @@ const App = () => {
 
   useEffect(() => {
     navigate('/'); // Przekierowanie na stronę główną
-  }, [navigate]);
+  }, []);
 
   return (
     <div>
@@ -26,7 +26,7 @@ const App = () => {
             <Route path="reviews" element={<Reviews />} />
           </Route>
         </Route>
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </div>
   );
