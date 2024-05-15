@@ -30,6 +30,7 @@ a:visited {
 }
 
 li {
-  list-style-image: url(./svg/movie-dot.svg);
+  list-style: none;
+  align-items: center;
   padding: 3px;
 }

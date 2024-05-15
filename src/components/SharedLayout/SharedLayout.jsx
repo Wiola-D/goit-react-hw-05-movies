@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import movieIcon from 'svg/movie.svg';
-import { Container, Header, Link, Logo } from './SharedLayout.styled';
+import { Container, Header, Link, Logo, Movies } from './SharedLayout.styled';
 
 const SharedLayout = () => {
   return (
@@ -9,6 +9,7 @@ const SharedLayout = () => {
       <Header>
         <Logo>
           <img src={movieIcon} alt="Movie Icon" />
+          <Movies> Movies</Movies>
         </Logo>
         <nav>
           <Link to="/">Home</Link>

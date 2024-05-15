@@ -23,11 +23,16 @@ export const Header = styled.header`
   }
 `;
 
-export const Logo = styled.p`
+export const Logo = styled.div`
   font-weight: 700;
   margin: 0;
+  display: flex;
+  gap: 20px;
 `;
 
+export const Movies = styled.div`
+  font-size: 30px;
+`;
 export const Link = styled(NavLink)`
   padding: 6px 12px;
   border-radius: 4px;
