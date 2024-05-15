@@ -1,4 +1,16 @@
 import styled from 'styled-components';
+
+export const InputGroup = styled.form`
+  display: flex;
+  align-items: center;
+  width: 450px;
+  height: 40px;
+  background-color: #fff;
+  box-shadow: 0px 0px 13px 1px rgba(225, 225, 225, 1);
+  border-radius: 3px;
+  overflow: hidden;
+`;
+
 export const Button = styled.button`
   display: inline-block;
   width: 58px;
@@ -17,18 +29,6 @@ export const Button = styled.button`
     opacity: 1;
   }
 `;
-
-export const InputGroup = styled.form`
-  display: flex;
-  align-items: center;
-  width: 100%;
-  max-width: 450px;
-  height: 40px;
-  background-color: #fff;
-  box-shadow: 0px 0px 13px 1px rgba(225, 225, 225, 1);
-  border-radius: 3px;
-  overflow: hidden;
-`;
 export const Input = styled.input`
   display: inline-block;
   width: 80%;
@@ -42,5 +42,11 @@ export const Input = styled.input`
   &::placeholder {
     font: inherit;
     font-size: 18px;
+  }
+`;
+export const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   }
 `;

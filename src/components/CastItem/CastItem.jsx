@@ -1,4 +1,4 @@
-import { Description, Image, Table } from './CastItem.styled';
+import { Description, Image, Table, Name } from './CastItem.styled';
 
 const CastItem = ({ cast, index }) => {
   const defaultImg =
@@ -20,11 +20,11 @@ const CastItem = ({ cast, index }) => {
         <Description>
           <div>
             <th>Name:</th>
-            <td>{cast.name}</td>
+            <Name>{cast.name}</Name>
           </div>
           <div>
             <th>Character:</th>
-            <td>{cast.character}</td>
+            <Name>{cast.character}</Name>
           </div>
         </Description>
       </td>

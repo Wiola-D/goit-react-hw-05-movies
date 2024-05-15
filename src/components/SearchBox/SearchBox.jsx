@@ -1,4 +1,4 @@
-import { Input, InputGroup, Button } from './SearchBox.styled';
+import { Input, InputGroup, Button, Container } from './SearchBox.styled';
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
@@ -26,16 +26,18 @@ const SearchBox = () => {
   };
 
   return (
-    <InputGroup>
-      <Button type="submit" onClick={handleSubmit}></Button>
-      <Input
-        id="myInput"
-        type="text"
-        value={searchQuery}
-        onChange={handleInputChange}
-        placeholder="Search for movies..."
-      />
-    </InputGroup>
+    <Container>
+      <InputGroup>
+        <Button type="submit" onClick={handleSubmit}></Button>
+        <Input
+          id="myInput"
+          type="text"
+          value={searchQuery}
+          onChange={handleInputChange}
+          placeholder="Search for movies..."
+        />
+      </InputGroup>
+    </Container>
   );
 };
 

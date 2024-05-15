@@ -61,7 +61,7 @@ const MovieDetails = () => {
         <div>
           <h4>Additional information</h4>
           {movie && (
-            <ul>
+            <ul className="Cast-Reviews">
               <li key="cast">
                 <Link to={`cast`}>Cast</Link>
               </li>

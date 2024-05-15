@@ -21,10 +21,7 @@ a {
   padding: 4px;
   border-radius: 6px;
 }
-a:hover,
-a:focus {
-  background-color: rgba(223, 140, 241, 0.249);
-}
+
 a:visited {
   color: rgba(29, 29, 29, 0.6);
 }
@@ -33,4 +30,12 @@ li {
   list-style: none;
   align-items: center;
   padding: 3px;
+}
+
+.Cast-Reviews {
+  list-style-image: url(./svg/movie-dot.svg);
+}
+
+img {
+  max-width: 200px;
 }
