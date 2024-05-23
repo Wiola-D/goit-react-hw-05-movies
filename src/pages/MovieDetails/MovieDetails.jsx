@@ -1,5 +1,5 @@
 import { useEffect, useState, Suspense } from 'react';
-import { Link, Outlet, useParams, useLocation } from 'react-router-dom';
+import { Outlet, useParams, useLocation } from 'react-router-dom';
 import { getMovieDetails } from '../../components/API';
 import BackLink from '../../components/BackLink';
 import {
@@ -9,6 +9,8 @@ import {
   Infos,
   Description,
   DescriptionContainer,
+  Link,
+  ListItem,
 } from './MovieDetails.styled';
 
 const MovieDetails = () => {
@@ -62,9 +64,9 @@ const MovieDetails = () => {
           <h4>Additional information</h4>
           {movie && (
             <ul className="Cast-Reviews">
-              <li key="cast">
+              <ListItem key="cast">
                 <Link to={`cast`}>Cast</Link>
-              </li>
+              </ListItem>
               <li key="reviews">
                 <Link to={`reviews`}>Reviews</Link>
               </li>

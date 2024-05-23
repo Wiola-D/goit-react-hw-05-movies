@@ -19,7 +19,7 @@ const Cast = () => {
 
   return (
     <Container>
-      <Title>Cast:</Title>
+      <Title>Cast</Title>
       <table>
         <Tbody>
           {casts && casts.length > 0 ? (

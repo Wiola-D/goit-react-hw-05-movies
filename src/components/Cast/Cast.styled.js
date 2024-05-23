@@ -6,6 +6,8 @@ export const Container = styled.div`
 export const Title = styled.h2`
 
   border-bottom: 1mm ridge rgba(211, 220, 50, 0.9);
+  padding-bottom: 5px;
+  text-align: center;
 
   }`;
 export const Tbody = styled.tbody`

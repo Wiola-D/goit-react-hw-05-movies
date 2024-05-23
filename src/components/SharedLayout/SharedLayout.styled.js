@@ -38,10 +38,10 @@ export const Link = styled(NavLink)`
   border-radius: 4px;
   text-decoration: none;
   color: black;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 500;
 
   &.active {
-    color: white;
-    background-color: darkviolet;
+    text-decoration: 4px underline darkviolet;
   }
 `;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 export const Container = styled.div`
 
@@ -42,4 +43,24 @@ export const DescriptionContainer = styled.div`
 margin-top: 20px;
 
 }
+`;
+export const Link = styled(NavLink)`
+  padding: 4px 8px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 13px 1px rgba(225, 225, 225, 1);
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+
+  &.active {
+    text-decoration: 3px underline darkviolet;
+  }
+  &:hover {
+    box-shadow: inset 0px 0px 13px 1px rgba(225, 225, 225, 1);
+`;
+
+export const ListItem = styled.li`
+  margin-bottom: 10px;
+
+  }
 `;
