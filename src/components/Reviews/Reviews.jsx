@@ -19,7 +19,7 @@ const Reviews = () => {
       setReviews(fetchedMovie);
     };
     fetchMovieReviews();
-  }, [reviews]);
+  }, [id, reviews]);
 
   return (
     <Container>
