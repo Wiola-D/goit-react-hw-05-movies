@@ -41,10 +41,6 @@ li {
   padding: 3px;
 }
 
-.Cast-Reviews {
-  list-style-image: url(./imgages/movie-dot.svg);
-}
-
 img {
   max-width: 200px;
 }
