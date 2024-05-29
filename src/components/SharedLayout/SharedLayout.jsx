@@ -1,6 +1,5 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
-import movieIcon from 'imgages/movie.svg';
 import { Container, Header, Link, Logo, Movies } from './SharedLayout.styled';
 
 const SharedLayout = () => {

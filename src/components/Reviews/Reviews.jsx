@@ -18,9 +18,8 @@ const Reviews = () => {
       console.log(reviews);
       setReviews(fetchedMovie);
     };
-
     fetchMovieReviews();
-  }, [id]);
+  }, [reviews]);
 
   return (
     <Container>
