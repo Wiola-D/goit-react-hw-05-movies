@@ -16,32 +16,44 @@ export const Header = styled.header`
   margin: 16px;
   padding-right: 40px;
   padding-left: 40px;
-  border-bottom: 2mm ridge rgba(211, 220, 50, 0.6);
+  border-bottom: 1.2mm ridge rgb(146, 41, 144, 0.6);
 
   > nav {
     display: flex;
   }
 `;
 
-export const Logo = styled.div`
-  font-weight: 700;
+export const Logo = styled(NavLink)`
+  font-weight: 400;
   margin: 0;
   display: flex;
   gap: 20px;
 `;
 
 export const Movies = styled.div`
-  font-size: 30px;
+  font-size: 40px;
+  color: lightgrey;
+  text-shadow: 0 0 5px rgb(67, 182, 208);
+
+  @media (max-width: 500px) {
+    display: none;
+  }
 `;
 export const Link = styled(NavLink)`
   padding: 6px 12px;
   border-radius: 4px;
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 400;
 
   &.active {
-    text-decoration: 4px underline darkviolet;
+    text-decoration: 3px underline rgb(146, 41, 144, 0.6);
+  }
+  &:hover {
+    color: rgb(146, 41, 144, 0.6);
+  }
+  &:focus {
+    color: rgb(146, 41, 144, 0.6);
   }
 `;

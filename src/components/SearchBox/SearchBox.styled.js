@@ -6,7 +6,7 @@ export const InputGroup = styled.form`
   width: 450px;
   height: 40px;
   background-color: #fff;
-  box-shadow: 0px 0px 13px 1px rgba(225, 225, 225, 1);
+  box-shadow: 0px 0px 7px 1px rgba(150, 150, 150, 1);
   border-radius: 3px;
   overflow: hidden;
 `;

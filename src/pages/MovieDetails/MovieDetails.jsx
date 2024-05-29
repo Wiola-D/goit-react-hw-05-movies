@@ -10,7 +10,8 @@ import {
   Description,
   DescriptionContainer,
   Link,
-  ListItem,
+  Buttons,
+  Overview,
 } from './MovieDetails.styled';
 
 const MovieDetails = () => {
@@ -20,7 +21,7 @@ const MovieDetails = () => {
   const backLinkHref = location.state?.from ?? '/movies';
 
   const defaultImg =
-    'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700';
+    'https://lascrucesfilmfest.com/wp-content/uploads/2018/01/no-poster-available.jpg';
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
@@ -49,30 +50,23 @@ const MovieDetails = () => {
               <Title>
                 {movie.title} ({movie.release_date.split('-')[0]})
               </Title>
+              <p>{movie.genres.map(genre => genre.name).join(' | ')}</p>
+              <Overview>
+                <h3>Overview</h3>
+                <p>{movie.overview}</p>
+              </Overview>
               <p>User Score: {movie.vote_average * 10}%</p>
-              <h3>Overview</h3>
-              <p>{movie.overview}</p>
-
-              <div>
-                <h4>Genres</h4>
-                <p>{movie.genres.map(genre => genre.name).join(' | ')}</p>
-              </div>
+              <Buttons>
+                <div key="cast">
+                  <Link to={`cast`}>Cast</Link>
+                </div>
+                <div key="reviews">
+                  <Link to={`reviews`}>Reviews</Link>
+                </div>
+              </Buttons>
             </Description>
           </Infos>
         )}
-        <div>
-          <h4>Additional information</h4>
-          {movie && (
-            <ul className="Cast-Reviews">
-              <ListItem key="cast">
-                <Link to={`cast`}>Cast</Link>
-              </ListItem>
-              <li key="reviews">
-                <Link to={`reviews`}>Reviews</Link>
-              </li>
-            </ul>
-          )}
-        </div>
       </DescriptionContainer>
       <Suspense fallback={<div>Loading page...</div>}>
         <Outlet />

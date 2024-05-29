@@ -1,7 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMovieReviews } from '../API';
-import { Container, Title, Table } from 'components/Reviews/Reviews.styled';
+import {
+  Container,
+  Title,
+  Table,
+  Data,
+} from 'components/Reviews/Reviews.styled';
 
 const Reviews = () => {
   const { id } = useParams();
@@ -10,6 +15,7 @@ const Reviews = () => {
   useEffect(() => {
     const fetchMovieReviews = async () => {
       const fetchedMovie = await getMovieReviews(id);
+      console.log(reviews);
       setReviews(fetchedMovie);
     };
 
@@ -27,6 +33,7 @@ const Reviews = () => {
                 <Table key={review.id}>
                   <th>{review.author}</th>
                   <td>{review.content}</td>
+                  <Data>{review.created_at.split('T')[0]}</Data>
                 </Table>
               ))}
           </tbody>

@@ -2,7 +2,7 @@ import { Description, Image, Table, Name } from './CastItem.styled';
 
 const CastItem = ({ cast, index }) => {
   const defaultImg =
-    'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700';
+    'https://lascrucesfilmfest.com/wp-content/uploads/2018/01/no-poster-available.jpg';
 
   return (
     <Table key={cast.id}>

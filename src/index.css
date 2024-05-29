@@ -8,6 +8,16 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.629),
+      rgba(91, 91, 91, 0.371)
+    ),
+    url('./imgages//movie-background-collage.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 code {
@@ -17,15 +27,14 @@ code {
 
 a {
   text-decoration: none;
-  color: darkviolet;
+  color: rgb(215, 215, 215);
   padding: 4px;
   border-radius: 6px;
 }
 
 a:visited {
-  color: rgba(29, 29, 29, 0.6);
+  color: rgba(116, 116, 116, 0.6);
 }
-
 li {
   list-style: none;
   align-items: center;
@@ -33,9 +42,18 @@ li {
 }
 
 .Cast-Reviews {
-  list-style-image: url(./svg/movie-dot.svg);
+  list-style-image: url(./imgages/movie-dot.svg);
 }
 
 img {
   max-width: 200px;
+}
+h2,
+h3,
+p {
+  margin: 0px;
+  margin-bottom: 5px;
+}
+ul {
+  padding: 0px;
 }
